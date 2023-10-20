@@ -1,0 +1,28 @@
+import { _decorator, Component, Label, Node } from 'cc';
+const { ccclass, property } = _decorator;
+
+/**
+ * 
+ * <%UnderscoreCaseClassName%>
+ * <%CamelCaseClassName%>
+ * <%Author%>
+ * <%DateTime%>
+ * <%FileBasename%>
+ * <%FileBasenameNoExtension%>
+ * <%URL%>
+ * <%ManualUrl%>
+ *
+ */
+
+@ccclass('Robot<%CamelCaseClassName%>')
+export class Robot<%CamelCaseClassName%> extends Component {
+    public label: Label;
+
+    onLoad() {
+        this.label = this.node.getComponent(Label);
+    }
+
+    start() {}
+
+    update(deltaTime: number) {}
+}
