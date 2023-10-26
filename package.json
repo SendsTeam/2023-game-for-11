@@ -2,6 +2,7 @@
   "name": "Hello_cocos",
   "uuid": "2a649f04-2939-4d07-b3d3-59a75bd86a45",
   "creator": {
-    "version": "3.8.0"
-  }
+    "version": "3.8.1"
+  },
+  "description": "玩个球"
 }
