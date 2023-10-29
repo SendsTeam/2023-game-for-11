@@ -6,8 +6,7 @@
       "fitHeight": true,
       "width": 720,
       "height": 1280
-    },
-    "highQuality": true
+    }
   },
   "script": {
     "preserveSymlinks": true
