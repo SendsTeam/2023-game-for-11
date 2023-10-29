@@ -3,10 +3,11 @@
   "custom_joint_texture_layouts": [],
   "general": {
     "designResolution": {
-      "fitHeight": false,
-      "width": 1280,
-      "height": 720
-    }
+      "fitHeight": true,
+      "width": 720,
+      "height": 1280
+    },
+    "highQuality": true
   },
   "script": {
     "preserveSymlinks": true
