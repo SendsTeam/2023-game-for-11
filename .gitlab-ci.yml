@@ -22,5 +22,5 @@ deploy-job:
   tags:
     - deployPage
   script:
-    - rm -rf ../../../../../../docker_data/frontend/dist/
-    - cp -r ./build/web-mobile/ ../../../../../../docker_data/frontend/dist/
+    - cd ../../../../../../
+    - ./deploy.sh
