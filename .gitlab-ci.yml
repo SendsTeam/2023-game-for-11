@@ -1,6 +1,6 @@
 stages:          # List of stages for jobs, and their order of execution
   - build
-  # - deploy
+  - deploy
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
@@ -11,28 +11,16 @@ build-job:       # This job runs in the build stage, which runs first.
     - echo "Compiling the code..."
     - cmd /c build-webmobile.bat
     - echo "Compile complete."
-    - ssh xiang@k rm -rf ~/website/WebServer/data/nginx/html/dist
-    - scp -r ./build/web-mobile/ xiang@k:~/website/WebServer/data/nginx/html/dist
   artifacts:
     paths:
       - ./build/web-mobile/
 
-# Reserved for feature use.
-# deploy-job:
-#   stage: deploy
-#   image: alpine:latest
-#   tags:
-#     - windows_web_mobile
-#   #before_script:
-#     #- sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
-#     #- apk update && apk add openssh-client rsync
-#     #- eval $(ssh-agent -s)
-#     #- echo "$SSH_PRIVATE_KEY" | ssh-add -
-#     #- mkdir -p ~/.ssh
-#     #- '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-#     #- ssh-keyscan xiang@kancy.life >> ~/.ssh/known_hosts
-#   script:
-#     - ssh xiang@kancy.life bash rm -rf ~/website/WebServer/data/nginx/html/dist
-#     - scp -r ./build/web-mobile/ xiang@kancy.life:~/website/WebServer/data/nginx/html/dist
-
-
+# Deploy in Server
+deploy-job:
+  stage: deploy
+  environment: shell
+  tags:
+    - deployPage
+  script:
+    - rm -rf ../../../../../../docker_data/frontend/dist/
+    - cp -r ./build/web-mobile/ ../../../../../../docker_data/frontend/dist/
