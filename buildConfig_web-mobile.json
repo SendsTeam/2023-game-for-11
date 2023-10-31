@@ -20,8 +20,8 @@
   "bundleCommonChunk": false,
   "packAutoAtlas": true,
   "startScene": "4ca0dac3-7abd-42b1-9470-e6c898fd667b",
-  "outputName": "web-mobile-001",
-  "taskName": "web-mobile-001",
+  "outputName": "web-mobile",
+  "taskName": "web-mobile",
   "scenes": [
     {
       "url": "db://assets/AssetsPackages/3D平台游戏套件/scene.scene",
