@@ -3,7 +3,7 @@
   "server": "",
   "platform": "web-mobile",
   "buildPath": "project://build",
-  "debug": false,
+  "debug": true,
   "md5Cache": false,
   "skipCompressTexture": true,
   "sourceMaps": false,
@@ -24,31 +24,47 @@
   "taskName": "web-mobile",
   "scenes": [
     {
-      "url": "db://assets/3D平台游戏套件/scene.scene",
+      "url": "db://assets/AssetsPackages/3D平台游戏套件/scene.scene",
       "uuid": "2f1479f8-6b80-4584-a97a-a72c83a45111"
     },
     {
-      "url": "db://assets/Scenes/begin.scene",
+      "url": "db://assets/AssetsPackages/免费通用UI素材/scene.scene",
+      "uuid": "b4f17cb5-43a9-4c3f-afe8-b59bec820cce"
+    },
+    {
+      "url": "db://assets/Scenes/Common/main-begin.scene",
       "uuid": "4ca0dac3-7abd-42b1-9470-e6c898fd667b"
     },
     {
-      "url": "db://assets/Scenes/end.scene",
+      "url": "db://assets/Scenes/Infinity/infinity-begin.scene",
+      "uuid": "ef31f0b6-307d-497c-8bef-c8157128fdef"
+    },
+    {
+      "url": "db://assets/Scenes/Infinity/infinity-end.scene",
+      "uuid": "4ec05d01-0edd-405a-ba5d-ba2b332c2035"
+    },
+    {
+      "url": "db://assets/Scenes/Infinity/infinity-run.scene",
+      "uuid": "b790a6cf-f3ef-4969-a7de-a87a87a89858"
+    },
+    {
+      "url": "db://assets/Scenes/Standard/standard-begin.scene",
+      "uuid": "95cce684-e007-46b2-aba3-db49512fb508"
+    },
+    {
+      "url": "db://assets/Scenes/Standard/standard-end.scene",
       "uuid": "7fb72a53-ee1f-4c26-86bb-c4fe18cd6ade"
     },
     {
-      "url": "db://assets/Scenes/main.scene",
+      "url": "db://assets/Scenes/Standard/standard-run.scene",
       "uuid": "d318480b-0643-41de-b2e6-b7adb25a4b9a"
-    },
-    {
-      "url": "db://assets/免费通用UI素材/scene.scene",
-      "uuid": "b4f17cb5-43a9-4c3f-afe8-b59bec820cce"
     }
   ],
   "packages": {
     "web-mobile": {
       "orientation": "portrait",
-      "embedWebDebugger": false,
-      "cullEngineAsmJsModule": false,
+      "embedWebDebugger": true,
+      "cullEngineAsmJsModule": true,
       "__version__": "1.0.1"
     },
     "engine": {
