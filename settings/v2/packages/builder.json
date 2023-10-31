@@ -6,6 +6,12 @@
     "logo": {
       "type": "custom",
       "image": "project://settings/splash.png"
+    },
+    "background": {
+      "type": "default"
     }
+  },
+  "bundleConfig": {
+    "custom": {}
   }
 }
