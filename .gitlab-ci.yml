@@ -12,6 +12,7 @@ build-job:       # This job runs in the build stage, which runs first.
     - cmd /c build-webmobile.bat
     - echo "Compile complete."
   artifacts:
+    expire_in: 20min
     paths:
       - ./build/web-mobile/
 
