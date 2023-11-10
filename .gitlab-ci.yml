@@ -25,3 +25,12 @@ deploy-job:
   script:
     - cd ../../../../../../
     - ./deploy.sh
+
+# Flush CDN
+flushcache:
+  stage: flushcache
+  image: python:alpine
+  script:
+    - cd python-flushcache
+    - python -m pip install -r requirements.txt
+    - python main.py
