@@ -1,7 +1,8 @@
 stages:          # List of stages for jobs, and their order of execution
   - build
   - deploy
-
+  - flushcache
+  
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   environment: shell
@@ -25,3 +26,12 @@ deploy-job:
   script:
     - cd ../../../../../../
     - ./deploy.sh
+
+# Flush CDN
+flushcache:
+  stage: flushcache
+  image: python:alpine
+  script:
+    - cd python-flushcache
+    - python -m pip install -r requirements.txt
+    - python main.py
