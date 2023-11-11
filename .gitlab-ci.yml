@@ -33,5 +33,5 @@ flushcache:
   image: python:alpine
   script:
     - cd python-flushcache
-    - python -m pip install -r requirements.txt
+    - python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
     - python main.py
