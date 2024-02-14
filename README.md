@@ -8,7 +8,7 @@
     git clone https://git.sends.cc/yuzu/game-for-11
     ```
 
-3. 解压`assets`下所有压缩包
+3. 解压`assets`里的`assets.zip.001`（由于是分卷压缩只需要解压一个，其余文件会自动读取）
 
 4. 使用Cocos Dashboard导入此项目.  
 
