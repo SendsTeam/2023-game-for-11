@@ -8,6 +8,8 @@
     git clone https://git.sends.cc/yuzu/game-for-11
     ```
 
-3. 使用Cocos Dashboard导入此项目.  
+3. 解压`assets`下所有压缩包
 
-4. 在Dashboard中双击项目打开.  
+4. 使用Cocos Dashboard导入此项目.  
+
+5. 在Dashboard中双击项目打开.  
